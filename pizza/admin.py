@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Pizza
+
+
+class PizzaAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description')
+
+
+admin.site.register(Pizza)
